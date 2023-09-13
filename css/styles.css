@@ -1,9 +1,41 @@
 html {
     box-sizing: border-box;
+    font-size: 100%;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.container {
+    min-height: inherit;
+    display: grid;
+    grid-template: minmax(150px, 15%) 1fr / minmax(250px, 15%) 1fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main-content"
+    ;
+}
+
+.header {
+    grid-area: header;
+    background-color: blueviolet;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    /*min-height: 100vh;*/
+    background-color: blue;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: black;
 }
