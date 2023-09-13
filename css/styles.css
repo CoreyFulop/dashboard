@@ -9,9 +9,15 @@ html {
     box-sizing: inherit;
 }
 
+:root {
+    --sidebar-background-colour: rgb(58, 58, 233);
+    --sidebar-text-colour: white;
+}
+
 body {
     min-height: 100vh;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
 }
 
 .container {
@@ -22,17 +28,69 @@ body {
         "sidebar header"
         "sidebar main-content"
     ;
+    gap: 2px;
 }
 
 .header {
     grid-area: header;
     background-color: blueviolet;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .sidebar {
     grid-area: sidebar;
-    /*min-height: 100vh;*/
-    background-color: blue;
+    background-color: var(--sidebar-background-colour, blue);
+    color: var(--sidebar-text-colour, white);   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+    gap: 5rem;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.sidebar .branding {
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 95px 1fr;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.sidebar .branding #logo {
+    height: 85px;
+    width: 85px;
+}
+
+.logo-text {
+    justify-self: start;
+}
+
+.sidebar .sections {
+    grid-row: 2 / 3;
+}
+
+.sidebar .technical {
+    grid-row: 3 / 4;
+}
+
+.sidebar ul {
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+.sidebar ul > li {
+    line-height: 2rem;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar ul > li > a{
+    color: inherit;
+    text-decoration: none;
 }
 
 .main-content {

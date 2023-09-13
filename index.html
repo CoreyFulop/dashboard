@@ -4,13 +4,34 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        </style>
         <title>Dashboard</title>
         <script src="./js/javascript.js" defer></script>
     </head>
     <body>
         <div class="container">
             <div class="header"></div>
-            <div class="sidebar"></div>
+            <div class="sidebar">
+                <div class="branding">
+                    <img src="./img/teddy-bear.svg" alt="Teddy bear icon" id="logo">
+                    <span class="logo-text">Dashboard</span>
+                </div>
+                <ul class="links sections">
+                    <li><img src="./img/home.svg" alt="Home icon"><a href="#">Home</a></li>
+                    <li><img src="./img/card-account-details-outline.svg" alt="Profile icon"><a href="#">Profile</a></li>
+                    <li><img src="./img/message.svg" alt="Messages icon"><a href="">Messages</a></li>
+                    <li><img src="./img/clock-outline.svg" alt="History icon"><a href="#">History</a></li>
+                    <li><img src="./img/file-multiple.svg" alt="Tasks icon"><a href="#">Tasks</a></li>
+                    <li><img src="./img/account-group.svg" alt="Communities icon"><a href="#">Communities</a></li>
+                </ul>
+                <ul class="links technical">
+                    <li><img src="./img/cog.svg" alt="#"><a href="#">Settings</a></li>
+                    <li><img src="./img/help-box.svg" alt="#"><a href="#">Support</a></li>
+                    <li><img src="./img/shield-check.svg" alt="#"><a href="#">Privacy</a></li>
+                </ul>
+            </div>
             <div class="main-content"></div>
         </div>
     </body>
