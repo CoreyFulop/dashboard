@@ -38,11 +38,44 @@ body {
     box-shadow: 2px 2px 2px lightslategray;
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
+    gap: 5px;
+    padding: 5px;
 }
 
 .search-container {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.header .search-container form {
+    display: grid;
+    grid-template: 1fr / 1fr 10fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.header .search-container button {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    justify-self: end;
+    background-image: url("../img/magnify.svg");
+}
+
+.search-container form input {
+    width: clamp(10ch, 40ch, 200ch);
+    border: none;
+    box-shadow: 2px 2px 2px lightslategray;
+    height: 2rem;
+    border-radius: 12px;
+    color: white;
+    background-color: black;
 }
 
 .welcome-container {
