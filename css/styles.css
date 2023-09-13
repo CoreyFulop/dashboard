@@ -35,6 +35,29 @@ body {
     grid-area: header;
     background-color: blueviolet;
     border-radius: 5px 0px 0px 5px;
+    box-shadow: 2px 2px 2px lightslategray;
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+}
+
+.search-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.welcome-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.account-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.manage-content-container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 .sidebar {
@@ -46,6 +69,7 @@ body {
     grid-template-rows: 100px 1fr 1fr;
     gap: 5rem;
     border-radius: 0px 5px 5px 0px;
+    box-shadow: 2px 2px 2px lightslategray;
 }
 
 .sidebar .branding {
