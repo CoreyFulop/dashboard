@@ -46,7 +46,7 @@ body {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     display: grid;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
@@ -81,6 +81,42 @@ body {
 .welcome-container {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template: 1fr / 1fr 4fr;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.welcome-container .user-image {
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 60px;
+    width: 60px;
+    background-image: url("../img/pexels-rasmus-svinding-35435.jpg");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 1px 0px 2px black;
+    justify-self: end;
+}
+
+.welcome-container .welcome-text-container {
+    display: grid;
+    grid-template: 1fr 2fr / 1fr;
+    justify-self: start;
+}
+
+.welcome-container .welcome-text-container p:nth-child(1) {
+    font-size: 0.7rem;
+    align-self: end;
+    margin-bottom: 0px;
+}
+
+.welcome-container .welcome-text-container p + p {
+    margin-top: 6px;
+    font-size: 1rem;
+    align-self: start;
+    font-weight: bold;
 }
 
 .account-container {
