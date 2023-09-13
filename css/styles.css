@@ -89,12 +89,12 @@ body {
     gap: 10px;
 }
 
-.welcome-container .user-image {
+.welcome-container .user-image-main {
     border-radius: 50%;
     border: 1px solid black;
     height: 60px;
     width: 60px;
-    background-image: url("../img/pexels-rasmus-svinding-35435.jpg");
+    background-image: url("../img/pexels-rasmus-svinding-35435.png");
     background-position: center;
     background-size: cover;
     box-shadow: 1px 0px 2px black;
@@ -123,6 +123,34 @@ body {
 .account-container {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 3fr;
+    gap: 10px;
+}
+
+.account-container img {
+    width: 20px;
+    height: 20px;
+    justify-self: end;
+    align-self: center;
+}
+
+.account-container .user-image-secondary {
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    background-image: url(../img/pexels-rasmus-svinding-35435.png);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 1px 0px 2px black;
+    justify-self: center;
+    align-self: center;
+}
+
+.account-container .user-name {
+    justify-self: start;
+    align-self: center;
 }
 
 .manage-content-container {
@@ -143,8 +171,6 @@ body {
     background-color: var(--sidebar-background-colour, blue);
     color: var(--sidebar-text-colour, white);
 }
-
-
 
 .sidebar {
     grid-area: sidebar;
