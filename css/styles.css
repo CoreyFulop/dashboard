@@ -232,4 +232,65 @@ body {
 .main-content {
     grid-area: main-content;
     background-color: black;
+    display: grid;
+    gap: 2px;
+    grid-template: 1fr 40% / 4fr 1fr;
+    grid-template-areas: 
+        "projects-container announcements-container"
+        "projects-container trending-container"
+        ;
+
+}
+
+.main-content .projects-container {
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    grid-area: projects-container;
+    display: grid;
+    grid-template: 50px 1fr / 1fr;
+}
+
+.cards-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+    background-color: var(--sidebar-background-colour);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px lightslategray;
+    min-height: 200px;
+    padding: 5px;
+    display: grid;
+    grid-template: 1.5rem 1fr 20px / 1fr;
+}
+
+.card .card-content {
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.card .card-buttons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+    
+}
+
+.card img {
+    height: 20px;
+    width: 20px;
+}
+
+.main-content .announcements-container {
+    grid-area: announcements-container;
+    background-color: blueviolet;
+}
+
+.main-content .trending-container {
+    grid-area: trending-container;
+    background-color: brown;
 }
