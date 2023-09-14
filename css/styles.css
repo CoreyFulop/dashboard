@@ -230,10 +230,12 @@ body {
 }
 
 .main-content {
+    color: white;
     grid-area: main-content;
     background-color: black;
     display: grid;
-    gap: 2px;
+    gap: 10px;
+    padding: 10px;
     grid-template: 1fr 40% / 4fr 1fr;
     grid-template-areas: 
         "projects-container announcements-container"
@@ -243,7 +245,6 @@ body {
 }
 
 .main-content .projects-container {
-    color: white;
     padding: 10px;
     font-size: 1rem;
     font-weight: 700;
@@ -261,8 +262,9 @@ body {
 .card {
     background-color: var(--sidebar-background-colour);
     border-radius: 5px;
-    box-shadow: 2px 2px 2px lightslategray;
+    box-shadow: 2px 2px 2px orange;
     min-height: 200px;
+    max-height: 300px;
     padding: 5px;
     display: grid;
     grid-template: 1.5rem 1fr 20px / 1fr;
@@ -286,11 +288,39 @@ body {
 }
 
 .main-content .announcements-container {
+    padding: 10px;
+    font-weight: 700;
     grid-area: announcements-container;
     background-color: blueviolet;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px lightslategray;
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+}
+
+.announcement {
+    padding: 5px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    background-color: var(--sidebar-background-colour, blue);
+}
+
+.announcements-title {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.announcements-content {
+    font-weight: 300;
+    font-size: 0.6rem;
 }
 
 .main-content .trending-container {
+    padding: 10px;
+    font-weight: 700;
     grid-area: trending-container;
     background-color: brown;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px lightslategray;
 }
